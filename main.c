@@ -17,7 +17,7 @@ int main()
 {
     getcwd(home_path, MAX_PATH_SIZE);
     struct sigaction newact;
-    // memset(&newact, 0, sizeof(newact));
+    memset(&newact, 0, sizeof(newact));
 	newact.sa_handler = signal_handler1;
     sigemptyset(&newact.sa_mask);
     // newact.sa_flags = SA_NOCLDSTOP | SA_NOCLDWAIT;
